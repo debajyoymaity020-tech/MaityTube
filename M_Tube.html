@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M Tube</title>
+<link rel="stylesheet" href="M_Tube.css">
+</head>
+<body>
+
+<header class="top">
+    <button class="icon-btn" id="menuBtn" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </button>
+
+    <a class="logo" href="M_Tube.html" aria-label="M Tube home">
+        <svg viewBox="0 0 32 24" width="32" height="24" aria-hidden="true">
+            <rect width="32" height="24" rx="7" fill="#1ed760"/>
+            <path d="M13 7.5v9l8-4.5z" fill="#000"/>
+        </svg>
+        <span>Maity Tube</span>
+    </a>
+
+    <form class="search" id="searchForm" role="search" autocomplete="off">
+        <input id="q" type="search" placeholder="Search videos or channels" aria-label="Search videos or channels">
+        <button type="submit" aria-label="Search">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M15.5 14h-.8l-.3-.3A6.5 6.5 0 1 0 14 15.5l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+        </button>
+    </form>
+
+    <div class="avatar me" title="Your account">M</div>
+</header>
+
+<aside class="sb" id="sidebar">
+    <nav>
+        <a href="#" class="active" data-cat="All">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 3 3 10v11h6v-6h6v6h6V10z"/></svg>Home
+        </a>
+        <a href="#" data-cat="Trending">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M3 17l6-6 4 4 8-8v5h2V4h-8v2h5l-6 6-4-4-8 8z"/></svg>Trending
+        </a>
+        <a href="#" data-cat="Music">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M9 3v11.5A3.5 3.5 0 1 0 11 18V8h6V3z"/></svg>Music
+        </a>
+        <a href="#" data-cat="Gaming">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="16" cy="12" r="1.5" fill="#000"/><rect x="6" y="11" width="4" height="2" fill="#000"/></svg>Gaming
+        </a>
+        <a href="#" data-cat="Learning">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 3 1 9l11 6 9-5v6h2V9z"/><path d="M5 13v4c0 2 3 3 7 3s7-1 7-3v-4l-7 4z"/></svg>Learning
+        </a>
+        <a href="#" data-cat="News">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><rect x="4" y="4" width="14" height="16" rx="1"/><rect x="7" y="7" width="8" height="2" fill="#000"/><rect x="7" y="11" width="8" height="2" fill="#000"/><rect x="7" y="15" width="5" height="2" fill="#000"/></svg>News
+        </a>
+    </nav>
+    <p class="sb-head">Library</p>
+    <nav>
+        <a href="#" class="soon">History</a>
+        <a href="#" class="soon">Liked videos</a>
+        <a href="#" class="soon">Watch later</a>
+    </nav>
+</aside>
+<div class="scrim" id="scrim"></div>
+
+<main>
+    <div class="chips" id="chips"></div>
+    <h2 class="result-head" id="resultHead" hidden></h2>
+    <section class="grid" id="grid" aria-live="polite"></section>
+    <p class="empty" id="empty" hidden>No videos match your search. Try a different word.</p>
+</main>
+
+<div class="modal" id="player" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="pTitle">
+        <button class="icon-btn modal-x" id="pClose" aria-label="Close player">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+        </button>
+        <div class="screen" id="pScreen">
+            <p>Video player appears here once the YouTube connection is added.</p>
+        </div>
+        <h3 id="pTitle"></h3>
+        <p class="p-meta" id="pMeta"></p>
+    </div>
+</div>
+
+<script src="M_Tube.js"></script>
+</body>
+</html>
